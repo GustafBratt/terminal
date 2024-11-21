@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Names List</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<ul>
+    <li th:each="name : ${names}">
+        <a th:href="@{/details/{name}(name=${name})}" th:text="${name}"></a>
+    </li>
+</ul>
+</body>
+</html>

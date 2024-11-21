@@ -1,0 +1,60 @@
+/* General Styles */
+body {
+    background-color: black; /* 1980s terminal black */
+    color: #00FF00; /* Bright green text */
+    font-family: "Courier New", Courier, monospace; /* Monospaced font for retro look */
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings */
+h1, h2, h3 {
+    text-transform: uppercase; /* All caps for bold statement */
+    border-bottom: 1px solid #00FF00; /* Green underline for terminal feel */
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Lists */
+ul {
+    list-style-type: square; /* Retro square bullets */
+    margin-left: 20px;
+}
+
+ul li {
+    line-height: 1.8; /* Space out the list items for readability */
+}
+
+/* Tables */
+table {
+    border-collapse: collapse; /* Merge table borders */
+    width: 100%;
+    margin: 20px 0;
+    font-size: 1em;
+}
+
+th, td {
+    border: 1px solid #00FF00; /* Green borders for cells */
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #004400; /* Darker green for headers */
+    font-weight: bold;
+}
+
+/* Hover Effects */
+a {
+    color: #00FF00; /* Same green for links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFFF00; /* Bright yellow on hover */
+}
+
+/* Additional Touch: Terminal Glow Effect */
+h1, h2, h3, table, ul, li, a {
+    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00; /* Glowing effect */
+}
