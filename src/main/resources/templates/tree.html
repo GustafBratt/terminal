@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tree View</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1>Tree Structure</h1>
+<p th:insert="deeplist :: renderTree(node=${root})"></p>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hej hopp</title>
+</head>
+<body>
+<!-- Recursive Fragment -->
+<th:block th:fragment="renderTree(node)">
+    <ul>
+        <li>
+            <span th:text="${node.name}"></span>
+            <th:block th:if="${node.children != null and !node.children.isEmpty()}">
+                <th:block th:each="child : ${node.children}">
+                    <th:block th:replace="~{this :: renderTree(${child})}"></th:block>
+                </th:block>
+            </th:block>
+        </li>
+    </ul>
+</th:block>
+</body>
+</html>

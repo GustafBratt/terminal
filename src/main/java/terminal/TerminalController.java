@@ -54,5 +54,24 @@ public class TerminalController {
 
         return "csvTable";
     }
+
+    @GetMapping("/tree")
+    public String getTree(Model model) {
+        TreeNode root = new TreeNode("Root", new ArrayList<>());
+        TreeNode child1 = new TreeNode("Child 1", new ArrayList<>());
+        TreeNode child2 = new TreeNode("Child 2", new ArrayList<>());
+
+        child1.getChildren().add(new TreeNode("Child 1.1", new ArrayList<>()));
+        child1.getChildren().add(new TreeNode("Child 1.2", new ArrayList<>()));
+
+        child2.getChildren().add(new TreeNode("Child 2.1", new ArrayList<>()));
+
+        root.getChildren().add(child1);
+        root.getChildren().add(child2);
+
+        model.addAttribute("root", root);
+        return "tree";
+    }
+
 }
 
